@@ -17,6 +17,7 @@ import Footer from './components/Footer'
 import Animation from './pages/Animation'
 import Other from './pages/Other'
 import Charts from './pages/Charts'
+import Tables from './pages/Tables'
 
 function App() {
   const [showSidebar, toggleSidebar] = useState(true)
@@ -35,7 +36,7 @@ function App() {
 
         <div id='content-wrapper' className='d-flex flex-column'>
           <div id='content'>
-            <Navbar showSidebar={showSidebar} />
+            <Navbar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
             <Routes>
               <Route path='/'>
                 <Route index element={<Home />} />
@@ -48,7 +49,8 @@ function App() {
                 <Route path='animation' element={<Animation />} />
                 <Route path='other' element={<Other />} />
                 <Route path='charts' element={<Charts />} />
-                <Route path='/' element={<Navigate to='/404' />} />
+                <Route path='table' element={<Tables />} />
+                <Route path='*' element={<Navigate to='/404' />} />
               </Route>
             </Routes>
           </div>
