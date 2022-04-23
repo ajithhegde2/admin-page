@@ -1,7 +1,7 @@
 import LineCharts from '../components/LineChart'
 import DoughnutChart from '../components/DoughnutChart'
 import EarningCard from '../components/EarningCard'
-import { LinearProgress } from '@mui/material'
+import ProgressBar from 'react-bootstrap/ProgressBar'
 import { FaDownload, FaCircle } from 'react-icons/fa'
 const Home = () => {
   return (
@@ -83,56 +83,32 @@ const Home = () => {
                 <h4 className='small font-weight-bold'>
                   Server Migration <span className='float-right'>20%</span>
                 </h4>
-                <div className='progress mb-4'>
-                  <LinearProgress
-                    variant='determinate'
-                    value={20}
-                    color='error'
-                    sx={{ borderRadius: 5, height: 8 }}
-                  />
+                <div className='mb-4'>
+                  <ProgressBar variant='danger' now={20} />
                 </div>
                 <h4 className='small font-weight-bold'>
                   Sales Tracking <span className='float-right'>40%</span>
                 </h4>
-                <div className='progress mb-4'>
-                  <LinearProgress
-                    variant='determinate'
-                    value={40}
-                    color='warning'
-                    sx={{ borderRadius: 5, height: 8 }}
-                  />
+                <div className='mb-4'>
+                  <ProgressBar variant='warning' now={40} />
                 </div>
                 <h4 className='small font-weight-bold'>
                   Customer Database <span className='float-right'>60%</span>
                 </h4>
-                <div className='progress mb-4'>
-                  <LinearProgress
-                    variant='determinate'
-                    value={60}
-                    sx={{ borderRadius: 5, height: 8 }}
-                  />
+                <div className=' mb-4'>
+                  <ProgressBar now={60} />
                 </div>
                 <h4 className='small font-weight-bold'>
                   Payout Details <span className='float-right'>80%</span>
                 </h4>
-                <div className='progress mb-4'>
-                  <LinearProgress
-                    variant='determinate'
-                    value={50}
-                    color='info'
-                    sx={{ borderRadius: 5, height: 8 }}
-                  />
+                <div className='mb-4'>
+                  <ProgressBar variant='info' now={80} />
                 </div>
                 <h4 className='small font-weight-bold'>
                   Account Setup <span className='float-right'>Complete!</span>
                 </h4>
-                <div className='progress'>
-                  <LinearProgress
-                    variant='determinate'
-                    value={50}
-                    color='success'
-                    sx={{ borderRadius: 5, height: 8 }}
-                  />
+                <div>
+                  <ProgressBar variant='success' now={100} />
                 </div>
               </div>
             </div>

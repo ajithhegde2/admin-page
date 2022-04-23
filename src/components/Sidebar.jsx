@@ -160,10 +160,10 @@ const Sidebar = ({ showSidebar, toggleSidebar, logout }) => {
 
       {/* <!-- Nav Item - Tables --> */}
       <li className='nav-item'>
-        <a className='nav-link' href='tables.html'>
+        <Link to='table' className='nav-link'>
           <FaTable />
           <span>Tables</span>
-        </a>
+        </Link>
       </li>
 
       {/* <!-- Divider --> */}
